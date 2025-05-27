@@ -40,3 +40,6 @@ pip install some-package -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## 本篇参考CSDN：
 网址链接：[CSDN](https://blog.csdn.net/weixin_44914727/article/details/130513081)
+
+## 安装Miniconda
+[https://blog.csdn.net/weixin_39787913/article/details/145529639](https://blog.csdn.net/weixin_39787913/article/details/145529639)
