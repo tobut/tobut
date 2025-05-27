@@ -27,5 +27,9 @@ source ~/.bashrc
 nvcc -V
 '''
 
+# 关于两个CUDA版本的解释：
+使用nvidia-smi命令查看CUDA版本为11.4，nvcc -V命令查看CUDA版本为11.1。以nvcc -V版本为准。
+nvidia-smi对应的时driver api，nvcc -V对应的是runtime api。
+
 # 参考文件
 [https://blog.csdn.net/weixin_44750512/article/details/123156020](https://blog.csdn.net/weixin_44750512/article/details/123156020)
