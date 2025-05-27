@@ -28,7 +28,7 @@ nvcc -V
 '''
 
 # 关于两个CUDA版本的解释：
-使用nvidia-smi命令查看CUDA版本为11.4，nvcc -V命令查看CUDA版本为11.1。以nvcc -V版本为准。
+使用nvidia-smi命令查看CUDA版本为12.9，nvcc -V命令查看CUDA版本为12.1。以nvcc -V版本为准。
 nvidia-smi对应的时driver api，nvcc -V对应的是runtime api。
 
 # 参考文件
