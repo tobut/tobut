@@ -87,3 +87,4 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 ## 参考博客链接
 安装openslide：[https://blog.csdn.net/qq_40678911/article/details/122367158#:~:text=Unable%20to](https://blog.csdn.net/qq_40678911/article/details/122367158#:~:text=Unable%20to) <br/>
 vim指令大全：[https://zhuanlan.zhihu.com/p/61515833](https://zhuanlan.zhihu.com/p/61515833)
+apt-get更换国内源出现Err：[https://blog.csdn.net/weixin_45784720/article/details/119298722](https://blog.csdn.net/weixin_45784720/article/details/119298722)
