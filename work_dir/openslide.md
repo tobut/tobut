@@ -82,7 +82,11 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted univers
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse 
 ```
-
+## apt-get Worning
+解决警告：'Key is stored in legacy trusted.gpg keyring'
+'''bash
+sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
+'''
 
 ## 参考博客链接
 安装openslide：[https://blog.csdn.net/qq_40678911/article/details/122367158#:~:text=Unable%20to](https://blog.csdn.net/qq_40678911/article/details/122367158#:~:text=Unable%20to) <br/>
