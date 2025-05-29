@@ -1,11 +1,10 @@
-
-
 ## 安装教程
 [https://blog.csdn.net/Luan__Yu/article/details/143562703](https://blog.csdn.net/Luan__Yu/article/details/143562703)
 
 ## 配置vscode
 
-'''bash
+
+```json
 {
     //------------------------------LaTeX 配置----------------------------------
     // 设置是否自动编译
@@ -187,4 +186,4 @@
     "security.workspace.trust.untrustedFiles": "newWindow", // 
     "files.autoSave": "afterDelay",// 自动保存
  }
-'''
+```
