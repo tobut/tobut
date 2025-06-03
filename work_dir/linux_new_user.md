@@ -29,3 +29,13 @@ usermod -d /home/new_user_name new_user_name
 ```bash
 usermod -a -G sudo new_user_name
 ```
+
+## 查看sudo用户列表
+```bash
+cat /etc/passwd
+```
+
+## 查看用户列表
+```bash
+sudo cat /etc/sudoers
+```
