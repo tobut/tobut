@@ -21,3 +21,6 @@ huggingface-cli download --resume-download meta-llama/Llama-2-13b-chat-hf --loca
 
 ## 参考文件
 [https://blog.csdn.net/lanlinjnc/article/details/136709225](https://blog.csdn.net/lanlinjnc/article/details/136709225)
+
+## 国内huggingface镜像站地址
+[https://hf-mirror.com/](https://hf-mirror.com/)
