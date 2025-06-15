@@ -9,13 +9,18 @@ huggingface-cli login
 ```
 然后输入token，回车，y，回车
 
-# 使用命令行进行下载
+# 使用命令行进行模型下载
 ```cmd
 huggingface-cli download --resume-download meta-llama/Llama-2-13b-chat-hf
 ```
 
 ```cmd
 huggingface-cli download --resume-download meta-llama/Llama-2-13b-chat-hf --local-dir Llama-2-13b-chat-hf
+```
+
+# 使用命令行进行模型下载
+```cmd
+huggingface-cli download --repo-type dataset --resume-download meta-llama/Llama-2-13b-chat-hf --local-dir Llama-2-13b-chat-hf
 ```
 
 
