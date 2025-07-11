@@ -39,3 +39,23 @@ cat /etc/passwd
 ```bash
 sudo cat /etc/sudoers
 ```
+
+## 创建远程密钥
+```bash
+sudo apt-get install openssh-server
+```
+```bash
+ssh-keygen
+```
+```bash
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+```bash
+chmod 700 ~/.ssh
+```
+```bash
+chmod 600 ~/.ssh/authorized_keys
+```
+```bash
+cp ~/.ssh/id_rsa ../Downloads
+```
