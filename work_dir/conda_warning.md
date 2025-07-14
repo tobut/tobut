@@ -13,3 +13,9 @@ conda clean --packages --tarballs
 ```bash
 conda update --all
 ```
+
+## Powershell 无法启动conda环境
+以管理员身份运行
+```
+Set-ExecutionPolicy RemoteSigned
+```
