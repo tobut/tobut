@@ -18,7 +18,11 @@ huggingface-cli download --resume-download meta-llama/Llama-2-13b-chat-hf
 huggingface-cli download --resume-download meta-llama/Llama-2-13b-chat-hf --local-dir Llama-2-13b-chat-hf
 ```
 
-# 使用命令行进行模型下载
+```cmd
+huggingface-cli download --resume-download  --local-dir 
+```
+
+# 使用命令行进行数据集下载
 ```cmd
 huggingface-cli download --repo-type dataset --resume-download meta-llama/Llama-2-13b-chat-hf --local-dir Llama-2-13b-chat-hf
 ```
