@@ -24,3 +24,7 @@ pip install reliability
 ```
 pip install shortuuid
 ```
+
+```
+pip install scikit-learn
+```
