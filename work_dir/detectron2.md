@@ -28,3 +28,7 @@ pip install shortuuid
 ```
 pip install scikit-learn
 ```
+
+```
+pip install pycocotools==2.0.8
+```
