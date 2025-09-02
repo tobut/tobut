@@ -59,3 +59,5 @@ chmod 600 ~/.ssh/authorized_keys
 ```bash
 cp ~/.ssh/id_rsa ../Downloads
 ```
+
+参考链接：[https://blog.csdn.net/tyustli/article/details/122222605](https://blog.csdn.net/tyustli/article/details/122222605)
