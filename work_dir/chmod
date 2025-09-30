@@ -1,4 +1,5 @@
 # 设置Linux文件夹权限公开给所有用户
+
 ```bash
 chmod -R 777 dir_name
 ```
