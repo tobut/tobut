@@ -53,3 +53,8 @@ conda env export > environment.yml
 ```bash
 conda env create -f environment.yml
 ```
+
+## conda 克隆环境，已有环境A，新建环境B
+```bash
+conda create -n B --clone A
+```
