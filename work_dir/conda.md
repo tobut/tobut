@@ -44,15 +44,29 @@ pip install some-package -i https://pypi.tuna.tsinghua.edu.cn/simple
 ## 安装Miniconda
 [https://blog.csdn.net/weixin_39787913/article/details/145529639](https://blog.csdn.net/weixin_39787913/article/details/145529639)
 
-## conda 导出环境配置
+## conda 导出环境配置并重建
+### conda 导出环境配置
 ```bash
 conda env export > environment.yml
 ```
 
-## conda 通过配置文件创建环境
+### conda 通过配置文件创建环境
 ```bash
 conda env create -f environment.yml
 ```
+
+
+## pip 导出环境配置并重建
+### pip 导出环境配置
+```bash
+pip freeze > requirements.txt
+```
+
+### pip 通过配置文件创建环境
+```bash
+pip install -r requirements.txt
+```
+
 
 ## conda 克隆环境，已有环境A，新建环境B
 ```bash
@@ -85,5 +99,6 @@ conda update --all
 ```
 Set-ExecutionPolicy RemoteSigned
 ```
+
 
 
