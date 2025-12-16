@@ -1,5 +1,10 @@
 # nvidia-smi正常运行，但是nvcc -V失效
 
+## nvidia实时查看显卡运行状态（每间隔一秒刷新一次）
+```bash
+watch -n 1 nvidia-smi
+```
+
 ## 查看cuda目录下是否有nvcc
 ```bash
 cd /usr/local/cuda/bin
