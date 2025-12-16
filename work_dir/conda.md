@@ -16,12 +16,12 @@ conda --version
 
 ### 创建指定版本的python环境
 ```bash
-conda create -n pyname python=3.9 -y
+conda create -n env_name python=3.9 -y
 ```
 
 ### 激活环境
 ```bash
-conda activate pyname
+conda activate env_name
 ```
 
 
@@ -74,7 +74,7 @@ pip install some-package -i https://pypi.tuna.tsinghua.edu.cn/simple
 网址链接：[CSDN](https://blog.csdn.net/weixin_44914727/article/details/130513081)
 
 ## conda 导出环境配置并重建
-### conda 导出环境配置
+### 首先启动conda环境，然后运行如下指令导出环境配置
 ```bash
 conda env export > environment.yml
 ```
@@ -102,14 +102,17 @@ pip install -r requirements.txt
 conda create -n B --clone A
 ```
 
+## 删除环境
+```bash
+conda env remove -n env_name
+```
 
 
 
 
+## conda problem
 
-# conda problem
-
-## 清理损坏包
+### 清理损坏包
 遇到问题：
 ```
 WARNING conda.gateways.disk.delete:unlink_or_rename_to_trash(140): Could not remove or rename 
@@ -128,6 +131,7 @@ conda update --all
 ```
 Set-ExecutionPolicy RemoteSigned
 ```
+
 
 
 
