@@ -19,7 +19,7 @@ You have requested document class ieeecolor
 {\let\color@begingroup\relax
 \let\color@endgroup\relax}{}%
 \def\fix@ieeecolor@hbox#1{%
- \hbox{\color@begingroup#1\color@endgroup}}
+\hbox{\color@begingroup#1\color@endgroup}}
 \patchcmd\@makecaption{\hbox}{\fix@ieeecolor@hbox}{}{\FAILED}
 \patchcmd\@makecaption{\hbox}{\fix@ieeecolor@hbox}{}{\FAILED}
 ```
