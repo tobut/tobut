@@ -23,3 +23,5 @@ You have requested document class ieeecolor
 \patchcmd\@makecaption{\hbox}{\fix@ieeecolor@hbox}{}{\FAILED}
 \patchcmd\@makecaption{\hbox}{\fix@ieeecolor@hbox}{}{\FAILED}
 ```
+#### 参考教程
+[https://blog.csdn.net/JingpengSun/article/details/129186509](https://blog.csdn.net/JingpengSun/article/details/129186509)
