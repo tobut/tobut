@@ -14,6 +14,11 @@ bash Miniconda3-latest-Linux-x86_64.sh
 conda --version
 ```
 
+### conda不默认激活base
+```bash
+conda config --set auto_activate_base false
+```
+
 ### 创建指定版本的python环境
 ```bash
 conda create -n env_name python=3.9 -y
