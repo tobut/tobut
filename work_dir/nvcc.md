@@ -36,5 +36,25 @@ nvcc -V
 使用nvidia-smi命令查看CUDA版本为12.9，nvcc -V命令查看CUDA版本为12.1。以nvcc -V版本为准。
 nvidia-smi对应的时driver api，nvcc -V对应的是runtime api。
 
+# 关于显卡无法正常使用
+使用nvidia-smi出现类似入戏报错：
+```bash
+Unable to determine the device handle for GPU0000:01:00.0: Unknown Error
+```
+
+通过如下命令检查出错显卡：
+```bash
+lspci
+```
+显卡正常显示如下：
+```bash
+01:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3090] (rev a1)
+01:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)
+02:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3090] (rev a1)
+02:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)
+```
+
+当发生上诉错误后（即显卡爆出一个未知的错误），其中被使用的显卡，也就显卡1中的rev a1变成了rev ff，无法正常读取。
+
 # 参考文件
 [https://blog.csdn.net/weixin_44750512/article/details/123156020](https://blog.csdn.net/weixin_44750512/article/details/123156020)
