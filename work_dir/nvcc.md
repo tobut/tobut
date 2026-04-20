@@ -53,8 +53,8 @@ lspci
 02:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3090] (rev a1)
 02:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)
 ```
-
-当发生上诉错误后（即显卡爆出一个未知的错误），其中被使用的显卡，也就显卡1中的rev a1变成了rev ff，无法正常读取。
+当发生上诉错误后（即显卡爆出一个未知的错误），其中被使用的显卡，也就显卡1中的rev a1变成了rev ff，无法正常读取。\n
+也可通过使用该显卡运行程序，无法正常通过Ctrl+c中断。
 
 # 参考文件
 [https://blog.csdn.net/weixin_44750512/article/details/123156020](https://blog.csdn.net/weixin_44750512/article/details/123156020)
