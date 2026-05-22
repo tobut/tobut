@@ -113,7 +113,15 @@ conda env remove -n env_name
 ```
 
 
+## 迁移conda地址
+参考链接
+[https://blog.csdn.net/weixin_41010198/article/details/106833121](https://blog.csdn.net/weixin_41010198/article/details/106833121)
 
+### 迁移后的openssl问题
+重新安装cryptography 
+```bash
+conda install cryptography
+```
 
 ## conda problem
 
