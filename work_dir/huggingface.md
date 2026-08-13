@@ -19,6 +19,9 @@ huggingface-cli download --resume-download meta-llama/Llama-2-13b-chat-hf --loca
 ```
 
 ```cmd
+modelscope download --model 'MiniMax/MiniMax-H3' --include 'FL2VA/*' --local_dir './'
+```
+```cmd
 huggingface-cli download --resume-download  --local-dir 
 ```
 
