@@ -69,28 +69,7 @@ curl -I -x http://127.0.0.1:17369 \
 
 **注意**：这只证明 `curl` 经代理可以访问，**不代表 Codex 进程已经使用代理**。若看到 Snap 版 curl 的提示，通常与本次连通性验证无关。
 
-## 4. 服务器 B：配置 VSCode 远程代理
-
-VSCode 已连接 B 时，按 `Ctrl + Shift + P` → **Preferences: Open Remote Settings (JSON)**。将以下字段**合并**到原有 JSON：
-
-```json
-{
-    "http.useLocalProxyConfiguration": false,
-    "http.proxy": "http://127.0.0.1:17369",
-    "http.proxySupport": "on",
-    "http.noProxy": [
-        "localhost",
-        "127.0.0.1",
-        "::1"
-    ]
-}
-```
-
-**建议保留 `http.noProxy`**：让遵循 VSCode 此设置的请求在访问本机地址 `localhost`、`127.0.0.1`、`::1` 时直连，避免把本地服务流量送进代理。这些是**目标地址排除规则**，**不会因为代理服务器本身是 `127.0.0.1:17369`，就让访问 OpenAI 的请求绕过代理**。
-
-> VSCode 的 `http.proxy` 不保证被 Codex 内部网络进程继承，因此还需要下一步。
-
-## 5. 服务器 B：配置 Codex 代理（登录成功的关键）
+## 4. 服务器 B：配置 Codex 代理（登录成功的关键）
 
 在 B 的远程终端执行：
 
@@ -123,6 +102,27 @@ no_proxy=localhost,127.0.0.1,::1
 
 然后**关闭并重新建立 VSCode Remote-SSH 会话**，确认 Codex 扩展安装、运行在预期的远程环境，打开 Codex 并选择 **Sign in with ChatGPT**。本次添加 `.env` 后已成功登录。
 
+## 5. 服务器 B：配置 VSCode 远程代理 (不必要)
+
+VSCode 已连接 B 时，按 `Ctrl + Shift + P` → **Preferences: Open Remote Settings (JSON)**。将以下字段**合并**到原有 JSON：
+
+```json
+{
+    "http.useLocalProxyConfiguration": false,
+    "http.proxy": "http://127.0.0.1:17369",
+    "http.proxySupport": "on",
+    "http.noProxy": [
+        "localhost",
+        "127.0.0.1",
+        "::1"
+    ]
+}
+```
+
+**建议保留 `http.noProxy`**：让遵循 VSCode 此设置的请求在访问本机地址 `localhost`、`127.0.0.1`、`::1` 时直连，避免把本地服务流量送进代理。这些是**目标地址排除规则**，**不会因为代理服务器本身是 `127.0.0.1:17369`，就让访问 OpenAI 的请求绕过代理**。
+
+> VSCode 的 `http.proxy` 不保证被 Codex 内部网络进程继承，因此还需要下一步。
+
 ## 6. 快速排错
 
 | 症状 | 优先处理 |
@@ -146,8 +146,6 @@ ssh -N -o ExitOnForwardFailure=yes -R 127.0.0.1:17369:127.0.0.1:7369 10.96.71.58
 - [ ] A 的 VPN 代理运行于 `127.0.0.1:7369`
 - [ ] A 的 SSH config 配置 `RemoteForward 127.0.0.1:17369 127.0.0.1:7369`
 - [ ] VSCode Remote-SSH 重新连接 B
-- [ ] B 上 `curl -x http://127.0.0.1:17369` 可访问 OpenAI API 与登录域名
-- [ ] B 的 VSCode Remote Settings 已配置 `http.proxy`，**保留 `http.noProxy`**
 - [ ] B 的 `~/.codex/.env` 已配置代理与 `NO_PROXY`
 - [ ] 重启远程会话，使用 Codex 登录并测试项目
 
